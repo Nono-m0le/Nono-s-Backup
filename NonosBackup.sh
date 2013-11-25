@@ -63,7 +63,7 @@ tar jcf ${backup_dir}/m0le.net-${date}-var-lib-mysql.tar.bz2 /var/lib/mysql/ 2>/
 tar jcf ${backup_dir}/m0le.net-${date}-etc.tar.bz2 /etc 2>/dev/null
  
 #Création du dump de la base de donnée avec mysqldump
-mysqldump -u root --password=$${sql_password} --all-databases | gzip -9 > ${backup_dir}/dump_${date}.sql.gz;
+mysqldump -u root --password=${sql_password} --all-databases | gzip -9 > ${backup_dir}/dump_${date}.sql.gz;
 echo "Etat du dossier local :" >> ${rapport};
 ls -lh ${backup_dir} -I rapport* >> ${rapport};
 echo " " >> ${rapport};
