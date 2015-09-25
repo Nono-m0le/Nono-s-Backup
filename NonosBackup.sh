@@ -50,7 +50,7 @@ mail='mail@du_rapport.com';
  
 # Création du repertoire de backup + Initialisation du rapport
 mkdir -p ${backup_dir};
-echo 'Rapport du '${date_start} > {rapport};
+echo 'Rapport du '${date_start} > ${rapport};
 echo " " >> ${rapport};
  
 # Les répertoires + exclusions des dossiers à archiver ...
